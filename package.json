@@ -1,0 +1,34 @@
+{
+  "name": "leaderboard-server",
+  "version": "1.0.0",
+  "description": "Backend server for Leaderboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailah28/leaderboard-server.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "api",
+    "rest"
+  ],
+  "author": "Ismail Hassan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismailah28/leaderboard-server/issues"
+  },
+  "homepage": "https://github.com/ismailah28/leaderboard-server#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}
