@@ -2,9 +2,10 @@
   "name": "leaderboard-server",
   "version": "1.0.0",
   "description": "Backend server for Leaderboard",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js",
+    "dev": "DEBUG=leaderboard-server:* nodemon src/bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,20 @@
     "url": "https://github.com/ismailah28/leaderboard-server/issues"
   },
   "homepage": "https://github.com/ismailah28/leaderboard-server#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5"
   }
 }
