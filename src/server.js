@@ -1,9 +1,25 @@
 const debug = require('debug')('leaderboard-server:server');
 const http = require('http');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = require('./app');
 const { normalizePort } = require('./utils/normalize-port');
+
+/**
+ * Connect to DB
+ */
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => debug('🚀 Database connection successful!'))
+  .catch((err) => {
+    debug(`💥 Database Error: ${err.message}`);
+  });
 
 /**
  * Get port from environment and store in Express.
