@@ -2,7 +2,6 @@ const createError = require('http-errors');
 const express = require('express');
 
 const errorHandler = require('./utils/error-handler');
-
 const setupMiddlewares = require('./config/middlewares');
 const indexRouter = require('./routes');
 
