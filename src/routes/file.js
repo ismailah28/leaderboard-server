@@ -1,8 +1,9 @@
 const router = require('express').Router();
 
-const { uploadFile } = require('../handlers/file');
+const { uploadFile, getAllFiles, getFileById } = require('../handlers/file');
 const multerConfig = require('../config/multer-config');
 
-router.route('/').post(multerConfig, uploadFile);
+router.route('/').get(getAllFiles).post(multerConfig, uploadFile);
+router.route('/:fileId').get(getFileById);
 
 module.exports = router;
